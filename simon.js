@@ -8,12 +8,14 @@ let level = 0;
 
 let h2 = document.querySelector("h2");
 
+let startBtn = document.querySelector("#startBtn");
 
-document.addEventListener("keypress", function(){
-    if(started == false){
+//  START BUTTON 
+startBtn.addEventListener("click", function () {
+    if (!started) {
         console.log("game is started");
         started = true;
-
+        startBtn.disabled = true;
         levelUp();
     }
 });
@@ -91,4 +93,5 @@ function reset(){
     gameSeq = [];
     userSeq = [];
     level =0;
+
 }
